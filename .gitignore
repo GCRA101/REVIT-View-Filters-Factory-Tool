@@ -1,1 +1,4 @@
-TextRevitFiles/
+TestRevitFiles/
+.vs/
+ViewFiltersFactory/obj/
+ViewFiltersFactory/bin/
