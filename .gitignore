@@ -1,6 +1,24 @@
+
+# Folders
 TestRevitFiles/
 .vs/
 ViewFiltersFactory/obj/
 ViewFiltersFactory/bin/
+
+# Visual Studio build artifacts
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build output
+bin/
+obj/
+
+# DLLs and PDBs
 *.dll
 *.pdb
+
+# Cache files
+*.cache
+*.txt
