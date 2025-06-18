@@ -2,3 +2,5 @@ TestRevitFiles/
 .vs/
 ViewFiltersFactory/obj/
 ViewFiltersFactory/bin/
+*.dll
+*.pdb
