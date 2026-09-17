@@ -4,7 +4,7 @@
 	<Name>View Filters Factory</Name>
 	<Assembly>ViewFiltersFactory\ViewFiltersFactory.dll</Assembly>
 	<FullClassName>ViewFiltersFactory.RibbonUI</FullClassName>
-	<ClientId>A164F0B0-FF49-4758-A26C-F30749AC78C6</ClientId>
+	<ClientId>B153D7B4-82F3-4AB1-9163-0200C1634263</ClientId>
 	<VendorId>GCRA010</VendorId>
 	<VendorDescription>BH</VendorDescription>
 	</AddIn>
