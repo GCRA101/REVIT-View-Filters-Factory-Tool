@@ -87,7 +87,19 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>copy /Y "$(TargetDir)$(TargetFileName)" "$(AppData)\Autodesk\Revit\Addins\2022\$(TargetName)\$(TargetFileName)"
-copy /Y "$(ProjectDir)$(TargetName).addin" "$(AppData)\Autodesk\Revit\Addins\2022\$(TargetName).addin"</PostBuildEvent>
+    <PostBuildEvent>set ADDIN_NAME=$(TargetName)
+set SOURCE_DLL=$(TargetDir)$(TargetFileName)
+set SOURCE_ADDIN=$(ProjectDir)$(TargetName).addin
+
+for %25%25v in (2024 2025 2026) do (
+    if exist "%25AppData%25\Autodesk\Revit\Addins\%25%25v" (
+        if not exist "%25AppData%25\Autodesk\Revit\Addins\%25%25v\%25ADDIN_NAME%25" (
+            mkdir "%25AppData%25\Autodesk\Revit\Addins\%25%25v\%25ADDIN_NAME%25"
+        )
+        copy /Y "%25SOURCE_DLL%25" "%25AppData%25\Autodesk\Revit\Addins\%25%25v\%25ADDIN_NAME%25\$(TargetFileName)"
+        copy /Y "%25SOURCE_ADDIN%25" "%25AppData%25\Autodesk\Revit\Addins\%25%25v\%25ADDIN_NAME%25.addin"
+    )
+)
+</PostBuildEvent>
   </PropertyGroup>
 </Project>
