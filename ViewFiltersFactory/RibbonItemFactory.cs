@@ -70,7 +70,7 @@ namespace ViewFiltersFactory
             pushButton.LargeImage = BitmapImageFactory.getInstance().create(largeImagePath);
             pushButton.ToolTipImage = BitmapImageFactory.getInstance().create(toolTipImagePath);
             pushButton.ToolTip = toolTipText;
-            pushButtonData.LongDescription = longDescription;
+            pushButton.LongDescription = longDescription;
 
             return pushButton;
 
