@@ -31,10 +31,9 @@ namespace ViewFiltersFactory
         {
             try
             {
-                //1. Create new RibbonTab
-                application.CreateRibbonTab("BH Plugins");
-                //2. Create new RibbonTab Panel
-                ribbonPanel = RibbonTabPanelFactory.getInstance().create(application, "BH Plugins", "View Filters");
+                //1. Get or create RibbonTab (it may already exist, e.g. created by RevitRibbonTabsFactory)
+                //2. Get or create RibbonTab Panel
+                ribbonPanel = RibbonTabPanelFactory.getInstance().getOrCreate(application, "BH Plugins", "View Filters");
                 //3. Buildup Inputs for RibbonItemFactory
                 String imagePath = "ViewFiltersFactory.AppLogo64x64.png";
                 String largeImagePath = "ViewFiltersFactory.AppLogo96x96.png";
